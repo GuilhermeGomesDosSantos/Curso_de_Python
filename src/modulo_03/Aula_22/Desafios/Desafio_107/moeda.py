@@ -11,7 +11,7 @@ def diminuir(preco, taxa):
     return res
 
 def dobro(preco):
-    res = preco * preco
+    res = preco * 2
     return res
 
 def metade(preco):
