@@ -1,0 +1,3 @@
+Gui; 20
+Gabriel; 9
+Regina; 54
