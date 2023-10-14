@@ -1,3 +1,10 @@
+# Crie um pequeno sistema modularizado que permite cadastrar pessoas pelo seu nome e idade
+# em um arquivo de texto simples.
+
+# O sistema só vai ter 2 opções: cadastrar uma nova pessoa e listar todas as pessoas cadastradas
+
+
+
 from lib.interface import *
 from lib.arquivo import *
 from time import sleep
@@ -13,13 +20,20 @@ while True:
     resposta = menu(['Ver Pessoas Cadastradas', 'Cadastrar Nova Pessoa', 'Sair do Sistema'])
     if resposta == 1:
         # Opção de listar o coneúdo de um arquivo!
-        cabecalho('Opção 1')
-
         lerArquivo(arq)
-        
+
+
     elif resposta == 2:
-        cabecalho('Opção 2')
+        # Opção de cadastrar uma nova pessoa
+        cabecalho('NOVO CADASTRO')
+
+        nome = str(input('Nome: '))
+        idade = leiaInt('Idade: ')
+        cadastrarArq(arq, nome, idade)
+
+
     elif resposta == 3:
+        # Opção de sair do sistema
         cabecalho('Saindo do Sistema... Até Logo !')
         break
     else:
